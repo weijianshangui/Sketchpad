@@ -1,8 +1,5 @@
-fis.match('*',{
-  useHash: true
-})
-
-fis.match('**.less',{
+fis.match('/less/(**.less)', {
   parser: fis.plugin('less'),
-  rExt: '.css'
-})
+  rExt: '.css',
+  release: '/css/$1'
+});

@@ -2,17 +2,46 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./less/basic.less">
+    <link rel="stylesheet" href="./less/basic.less">
+    <link rel="stylesheet" href="./lib/bower_components/dropzone/dist/dropzone.css">
     <title>画板</title>
   </head>
   <body>
     <div class="container">
       <div class="slider">
-
+        <div class="menu">
+          <img src="./images/icon/menu.png" alt="">
+        </div>
+        <div class="sliderContent">
+          <form action="/file-upload" class="mydropzone dropzone">
+            <div class="fallback">
+              <input name="file" type="file" multiple />
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="content">
 
+      <div class="content">
+        <div class="sketchpad">
+          <div class="penColor">
+            <ul id="pen">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <canvas id="canvas"></canvas>
+        </div>
+        <div class="imgDeal">
+
+        </div>
       </div>
     </div>
+    <script src="./lib/bower_components/dropzone/dist/dropzone.js" charset="utf-8"></script>
+    <script src="./js/entry.js" charset="utf-8"></script>
+    <script src="./js/canvas.js" charset="utf-8"></script>
   </body>
 </html>
