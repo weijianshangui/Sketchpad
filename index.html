@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./less/basic.less">
-    <link rel="stylesheet" href="./lib/bower_components/dropzone/dist/dropzone.css">
     <title>画板</title>
   </head>
   <body>
@@ -12,12 +11,15 @@
         <div class="menu">
           <img src="./images/icon/menu.png" alt="">
         </div>
+        <!-- 图片加载 -->
         <div class="sliderContent">
-          <form action="/file-upload" class="mydropzone dropzone">
-            <div class="fallback">
-              <input name="file" type="file" multiple />
-            </div>
-          </form>
+          <div class="dropzone">
+            <span>Click here to select a picture</span>
+          </div>
+          <input id="imgFile" name="file" type="file" />
+
+          <div id="localImag">
+          </div>
         </div>
       </div>
 
@@ -40,9 +42,11 @@
         </div>
       </div>
     </div>
-    <script src="./lib/bower_components/dropzone/dist/dropzone.js" charset="utf-8"></script>
+    <!-- 库文件 -->
+    <!-- js文件 -->
     <script src="./js/entry.js" charset="utf-8"></script>
     <script src="./js/painer.js" charset="utf-8"></script>
     <script src="./js/canvas.js" charset="utf-8"></script>
+    <script src="./js/imgCanvas.js" charset="utf-8"></script>
   </body>
 </html>

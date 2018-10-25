@@ -10,9 +10,6 @@ window.onload = function(){
   var sliderW = 20; //slider占款宽度的20%
   var contentW = 80;//content占宽度的80%
   window.widthChange = true;
-
-  slider.style.height = document.documentElement.clientHeight + 'px';
-  content.style.height = document.documentElement.clientHeight + 'px';
   //设置canvas的大小
   canvas.width = parseFloat(getStyle(content, 'width'));
   canvas.height = parseFloat(getStyle(content, 'height'))
